@@ -13,4 +13,4 @@ jobs:
       - name: verify docker 
         run: |
           docker --version
-          &&  docker ps
+          docker ps
