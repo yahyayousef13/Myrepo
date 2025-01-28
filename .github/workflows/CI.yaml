@@ -18,6 +18,6 @@ jobs:
           docker ps
 
       - name: setup docker build
-        uses: yahya/my-docker-action@v1
+        uses: yahya/Myrepo@v1
         with:
           my-input: "hello docker this is yahya"
