@@ -1,26 +1,27 @@
-name: continus integration
+name: Continuous Integration
 on:
   push:
     branches:
       - main
-
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     env: 
-      MESSAGE_YAHYA: "Hello yahya How are you ?"
+      MESSAGE_YAHYA: "Hello Yahya, how are you?"
+
     steps:
-    #step 1 - checkout the code from the repository
-      - name: checkout code
+      # Step 1 - Checkout the code from the repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-    # step 2 - docker verification
-      - name: verify docker 
+      # Step 2 - Docker verification
+      - name: Verify Docker
         run: |
           docker --version
           docker ps
-    # step 3 Print anything in console output
+
+      # Step 3 - Print anything in console output
       - name: Print message
-        run: echo "${{ MESSAGE_YAHYA }}" # will write a message in console
+        run: echo "${{ env.MESSAGE_YAHYA }}" # Accessing the environment variable correctly
