@@ -3,9 +3,14 @@ on:
   push:
     branches:
       - main
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env: 
+      MESSAGE_YAHYA: "Hello yahya How are you ?"
     steps:
     #step 1 - checkout the code from the repository
       - name: checkout code
@@ -17,5 +22,5 @@ jobs:
           docker --version
           docker ps
     # step 3 Print anything in console output
-      - name: Print Hello Yahya 
-        run: echo "Hello yahya How are you ?"
+      - name: Print message
+        run: echo ${{ MESSAGE_YAHYA }} # will write a message in console
