@@ -23,4 +23,4 @@ jobs:
           docker ps
     # step 3 Print anything in console output
       - name: Print message
-        run: echo ${{ MESSAGE_YAHYA }} # will write a message in console
+        run: echo "${{ MESSAGE_YAHYA }}" # will write a message in console
