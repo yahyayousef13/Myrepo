@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env: 
-      MESSAGE_YAHYA: "Hello Yahya, how are you?"
+   # env: 
+   #   MESSAGE_YAHYA: "Hello Yahya, how are you?"
 
     steps:
       # Step 1 - Checkout the code from the repository
