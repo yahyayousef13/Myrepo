@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+    # step 1: checkout the code from the github repository
       - name: checkout repository
         uses: actions/checkout@v2
+ # step 2: Will verify docker access
+      - name: verifying docker access
+        run: docker --version
