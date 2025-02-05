@@ -16,3 +16,6 @@ jobs:
  # step 2: Will verify docker access
       - name: verifying docker access
         run: docker --version
+ # step 3: setting up docker buildx
+      - name: setup docker buildx
+        uses: docker/setup-buildx-action@v2
