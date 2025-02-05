@@ -19,3 +19,7 @@ jobs:
  # step 3: setting up docker buildx
       - name: setup docker buildx
         uses: docker/setup-buildx-action@v2
+ #step 4: building a docker image
+      - name: build docker image
+        run: |
+          echo "bulding docker image"
