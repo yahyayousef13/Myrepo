@@ -32,3 +32,6 @@ jobs:
  #step 6: Conatinerizing image
       - name: container image
         run: docker run -d --name EHV -p 8200:8200 ehv-vault
+ # step 7: checking container
+      - name: conatiner verification
+        run: docker ps
