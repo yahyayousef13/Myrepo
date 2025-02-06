@@ -26,3 +26,6 @@ jobs:
           set -e #stop script first error
           docker build -t ehv-vault -f docker/Dockerfile .
         continue-on-error: false # Ensure the build errors stop the workflow
+ #step 5: verify image
+      - name: verify docker image
+        run: docker images
